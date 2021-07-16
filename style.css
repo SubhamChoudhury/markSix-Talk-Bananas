@@ -1,15 +1,112 @@
-textarea{
-    width: 80vw;
-    height: 20vh;
-    margin: 10px;
-    padding: 10px;
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@400;700&display=swap");
 
+* {
+  font-family: "Grandstander", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --yellow: #f5e050;
+  --blue: rgb(27, 51, 79);
+}
+body {
+  background-image: url(minions.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.heading {
+  text-align: center;
+  background-color: var(--yellow);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 2rem 0;
+}
+.container {
+  width: 45%;
+  margin: 20vh auto;
+}
+#text-input {
+  display: block;
+  font-size: large;
+  height: 8rem;
+  width: 80%;
+  border: 1px solid black;
+  padding: 1rem;
+  resize: none;
+}
+p {
+  color: white;
+}
+#output {
+  padding: 16px 16px 16px 16px;
+  box-sizing: border-box;
+  background-color: white;
+  border: 2px solid black;
+  width: 80%;
+  height: 8rem;
+  margin-top: 5px;
+}
+#translate-btn {
+  padding: 1rem;
+  background-color: var(--yellow);
+  border: none;
+  margin: 1rem 0;
+  font-size: 15px;
+}
+.about {
+  position: fixed;
+  height: 13%;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: var(--blue);
+}
+.center {
+  width: 45%;
+  padding: 1rem;
+  margin: auto;
+}
+@media /*(min-width: 320px) and*/ (max-width: 480px) /* Mobile */ {
+  body {
+    width: 100%;
+    height: auto;
+  }
+
+  .heading {
+    font-size: small;
+    padding: 1rem;
+  }
+
+  .container,
+  .center {
+    /* margin: 49vh auto; */
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  #input-area,
+  #output {
+    height: 100px;
+    width: 90%;
+    margin: auto;
+  }
+
+  .container p {
+    margin: auto;
+  }
+
+  #translate-btn {
+    display: block;
+    margin: 1rem auto;
+  }
 }
 
-#output{
-    border: 2px solid black;
-    width: 80vw;
-    height: 20vh;
-    margin: 10px;
-    padding: 10px;
+@media (min-width: 539px) and (max-width: 1024px) /* Tablet */ {
+  .container,
+  .center {
+    /* margin: 49vh auto; */
+    width: 80%;
+    padding: 1rem;
+  }
 }
